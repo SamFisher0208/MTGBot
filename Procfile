@@ -1,1 +1,1 @@
-web: gunicorn mtgbot01.wsgi
+worker: python3 C:\Users\Sam Fisher\MTGBot\main.py
