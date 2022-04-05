@@ -1,1 +1,1 @@
-worker: python3 C:\Users\Sam Fisher\MTGBot\main.py
+worker: python3 main.py
