@@ -1,1 +1,1 @@
-worker: python yourfile.py
+web: gunicorn mtgbot01.wsgi
