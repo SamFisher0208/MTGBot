@@ -3,7 +3,6 @@ import os
 from dotenv import load_dotenv
 import sqlite3
 import postCards
-#from keepAlive import keepAlive
 
 
 #connection = sqlite3.connect("magicRepeats.db")
@@ -58,9 +57,7 @@ async def on_message(message):
   
   #if message.content.startswith("[["):
 
-    
 
-#keepAlive()
 
 client.run(TOKEN)
 
