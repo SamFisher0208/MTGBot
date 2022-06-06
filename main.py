@@ -1,14 +1,7 @@
 import discord  #discord library
 import os
 from dotenv import load_dotenv
-import sqlite3
 import postCards
-
-
-#connection = sqlite3.connect("magicRepeats.db")
-#cursr = connection.cursor()
-#print("Connected to the database")
-#connection.close()
 
 
 client = discord.Client()
