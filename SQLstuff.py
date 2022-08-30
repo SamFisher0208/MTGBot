@@ -27,7 +27,8 @@ print("Connected to the database")
 #   3. commit and close DB
 
 def updateDB(imgURL):
-    
+    cursr.execute("INSERT INTO magicCards VALUE (?);", imgURL)
+    connection.commit
     return
 
 connection.close()

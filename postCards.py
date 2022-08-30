@@ -1,5 +1,6 @@
 import requests #http library
 import json #json library
+import SQLstuff
 
 def getCard(cardType):
   card = requests.get(f"https://api.scryfall.com/cards/random{cardType}")
@@ -11,6 +12,7 @@ def getVibe():
   card = requests.get("https://api.scryfall.com/cards/random")
   jsonData = json.loads(card.text)
   imgURL = jsonData['image_uris']['png']
+  SQLstuff.updateDB(imgURL)
   return imgURL
 
 def getCreature():
