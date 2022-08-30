@@ -26,9 +26,9 @@ print("Connected to the database")
 #       2a. if true, call getVibe again?
 #   3. commit and close DB
 
-def updateDB(imgURL):
-    cursr.execute("INSERT INTO magicCards VALUE (?);", imgURL)
-    connection.commit
-    return
+#def updateDB(imgURL):
+    #cursr.execute("INSERT INTO magicCards VALUE (?);", imgURL)
+    #connection.commit
+    #return
 
 connection.close()
