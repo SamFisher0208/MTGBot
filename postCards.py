@@ -1,6 +1,6 @@
 import requests #http library
 import json #json library
-import SQLstuff
+#import SQLstuff
 
 def getCard(cardType):
   card = requests.get(f"https://api.scryfall.com/cards/random{cardType}")
