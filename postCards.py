@@ -6,6 +6,7 @@ def getCard(cardType):
   headers = {'user-agent': 'Its Just Me Beech/MTGBot/1.0', 'Accept': '*/*'}
   card = requests.get(f"https://api.scryfall.com/cards/random{cardType}", headers=headers)
   jsonData = json.loads(card.text)
+  print(jsonData)
   imgURL = jsonData['image_uris']['png']
   return imgURL
 
