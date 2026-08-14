@@ -5,6 +5,7 @@ import json #json library
 def getCard(cardType):
   headers = {'user-agent': 'ItsJustMeBeech/MTGBot/1.0', 'Accept': '*/*'}
   card = requests.get(f"https://api.scryfall.com/cards/random{cardType}", headers=headers)
+  print('hello world')
   print(card)
   jsonData = json.loads(card.text)
   print(jsonData)
