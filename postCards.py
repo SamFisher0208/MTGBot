@@ -8,6 +8,7 @@ def getCard(cardType):
   jsonData = json.loads(card.text)
   print(jsonData)
   imgURL = jsonData['image_uris']['png']
+  #a change
   return imgURL
 
 def getVibe():
