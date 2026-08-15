@@ -3,7 +3,7 @@ import json #json library
 #import SQLstuff
 
 def getCard(cardType):
-  headers = {'user-agent': 'ItsJustMeBeech/MTGBot/1.0', 'Accept': '*/*'}
+  headers = {'user-agent': 'MTGBot/1.0', 'Accept': '*/*'}
   url = f"https://api.scryfall.com/cards/random{cardType}"
   card = requests.get(url, headers=headers)
   jsonData = json.loads(card.text)
@@ -11,9 +11,11 @@ def getCard(cardType):
   return imgURL
 
 def getVibe():
-  card = requests.get("https://api.scryfall.com/cards/random")
+  headers = {'user-agent': 'MTGBot/1.0', 'Accept': '*/*'}
+  url = "https://api.scryfall.com/cards/random"
+  card = requests.get(url, headers=headers)
   jsonData = json.loads(card.text)
-  #print(jsonData)
+  print(jsonData)
   imgURL = jsonData['image_uris']['png']
   #SQLstuff.updateDB(imgURL)
   return imgURL
