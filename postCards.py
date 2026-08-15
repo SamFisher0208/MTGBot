@@ -15,7 +15,6 @@ def getVibe():
   url = "https://api.scryfall.com/cards/random"
   card = requests.get(url, headers=headers)
   jsonData = json.loads(card.text)
-  print(jsonData)
   imgURL = jsonData['image_uris']['png']
   #SQLstuff.updateDB(imgURL)
   return imgURL
